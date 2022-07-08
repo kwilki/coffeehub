@@ -1,6 +1,5 @@
-import React from 'react';
-import { NavLink } from 'react-router-dom';
-import { useNavigate } from 'react-router-dom';
+import { useState } from 'react';
+import { NavLink, useNavigate } from 'react-router-dom';
 import LoginButton from "./LoginButton";
 import LogoutButton from "./LogoutButton";
 import { useAuth0 } from "@auth0/auth0-react";
@@ -9,6 +8,7 @@ import '../css/hamburgerNav.css';
 
 const NavBar = () => {
     const { user, isAuthenticated } =useAuth0();
+    const [userId, setUserId] = useState()
 
     let navigate = useNavigate()
     const returnHome = () => {
@@ -28,10 +28,12 @@ const NavBar = () => {
             userEmail: user.email,
             timezone: 'Please edit Time Zone'
         }
+        
         if(json.find(x => x.email === user.email)) {
             let index = json.findIndex(x => x.email === user.email)
-            let timeZone = json[index].timezone
-            return timeZone
+            console.log(json[index].id)
+            // let timeZone = json[index].timezone
+            setUserId(json[index].id)
         } else {
             let configObj = {
                 method:"POST",
@@ -58,7 +60,7 @@ const NavBar = () => {
                     {!isAuthenticated && (<div className="login"><LoginButton className="nav-item"/></div>)}
                     {isAuthenticated && (
                         <div className="login">
-                            <NavLink to="/Account" className="nav-item" onClick={initUser}>Account</NavLink>
+                            <NavLink to="/Account" className="nav-item" userid={userId} onClick={initUser}>Account</NavLink>
                             <LogoutButton className="nav-item"/>
                         </div>
                     )}
