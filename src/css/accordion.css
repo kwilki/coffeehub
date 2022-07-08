@@ -1,0 +1,55 @@
+@media only screen and (max-width : 1000px)  {
+    div.accordion {
+        width: 60%;
+    }
+}
+@media only screen and (max-width : 700px)  {
+    div.accordion {
+        width: auto;
+    }
+}
+
+.recipe-accordions {
+    display: flex;
+    flex-direction: column;
+}
+
+.accordion {
+    font-family: 'Akzidenz-GroteskNextReg', sans-serif;
+    font-size: 1rem;
+    background-color: #eee;
+    color: #364771;
+    cursor: pointer;
+    box-shadow: 0 2px 5px #888888;
+    padding: 0.5em;
+    margin-top: 0.5em;
+    width: 40%;
+    text-align: left;
+    border: 2px solid #364771;
+    border-radius: 25px;
+    outline: none;
+    transition: 0.4s;
+    margin-top: 1em;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+button.active {
+    background-color: #eee;
+    color: #FDF5F1;
+}
+
+.accordion-title {
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    margin-right: 0.5em;
+}
+
+.panel-expanded {
+    padding: 0 18px;
+    background-color: transparent;
+    overflow: hidden;
+    max-height: auto;
+    transition: max-height 0.2s ease-out;
+}

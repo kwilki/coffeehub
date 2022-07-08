@@ -1,14 +1,21 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './App';
+import './css/accordion.css'
+import App from './Containers/App';
 import reportWebVitals from './reportWebVitals';
+import { Auth0Provider } from "@auth0/auth0-react";
+import './index.css'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
+  <Auth0Provider
+    domain="coffeehub.au.auth0.com"
+    clientId="YawowmRvNpP7z53bmgB8M0nCCjSFh6IB"
+    redirectUri={window.location.origin}
+  >
     <App />
-  </React.StrictMode>
+  </Auth0Provider>
 );
 
 // If you want to start measuring performance in your app, pass a function

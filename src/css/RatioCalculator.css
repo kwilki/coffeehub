@@ -1,0 +1,33 @@
+.ratio-form {
+    margin-top: 1em;
+}
+
+.ratio-form-item {
+    max-width: 20%;
+    display: flex;
+    flex-grow: 0;
+}
+
+.calculator-input {
+    max-width: 40px;
+    border: none;
+    flex-grow: 0;
+}
+
+.ratio-heading {
+    flex-grow: 1;
+}
+
+.input-container {
+    width: 100px;
+}
+
+.reset-button {
+    border: 0.5px solid;
+    margin-left: 0.5em;
+    border-radius: 0.2em;
+}
+
+.buttons {
+    margin-top: 1em;
+}

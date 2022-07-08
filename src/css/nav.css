@@ -1,0 +1,50 @@
+@media only screen and (max-width : 800px)  {
+    button.hamburger {
+        display: block;
+    }
+    nav.desktop-nav {
+        display: none;
+    }
+}
+
+.title {
+    cursor: pointer;
+}
+
+.login {
+    display: inline-block;
+    margin-right: 0.5em;
+}
+
+.nav-item {
+    margin-left: 0.5em;
+}
+
+button.nav-item {
+    border-radius: 0.8em;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
