@@ -1,8 +1,19 @@
-import React from "react";
+import { useState } from 'react'
 import { useAuth0 } from "@auth0/auth0-react";
 
 const Account = () => {
     const { user, isAuthenticated, isLoading } = useAuth0();
+    const [timezone, setTimezone] = useState()
+
+    fetch("http://localhost:8000/Users")
+            .then(res => res.json())
+            .then(json => returnTimezone(json))
+            .catch("Gracefully handling error")
+    
+    let returnTimezone = (json) => {
+            let index = json.findIndex(x => x.email === user.email)
+            setTimezone(json[index].timezone)
+    }
 
     if (isLoading) {
         return <div>Loading ...</div>;
@@ -12,8 +23,9 @@ const Account = () => {
         isAuthenticated && (
             <div className="page-content">
                 <img src={user.picture} alt={user.name} />
-                <h2>{user.name}</h2>
-                <p>{user.email}</p>
+                <h3>Username: {user.name}</h3>
+                <p>Email: {user.email}</p>
+                <p>Time Zone: {timezone} <button>Edit</button></p>
         </div>
         )
     );

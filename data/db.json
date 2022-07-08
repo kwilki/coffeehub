@@ -1,61 +1,63 @@
 {
-    "Users":[
-        {
-            "Username": "",
-            "Password": ""
+  "Users": [
+    {
+      "email": "kylewilkinson14@gmail.com",
+      "timezone": "Please edit Timezone",
+      "id": 1
+    }
+  ],
+  "Recipes": [
+    {
+      "CoffeeInformation": [],
+      "RecipeInformation": [],
+      "AssociatedBrewInstructions": []
+    }
+  ],
+  "BrewInstructions": [],
+  "SuggestedRecipes": [
+    {
+      "V60/Pourover": {
+        "RecipeInformation": {
+          "Ratio": "1:17",
+          "GrindSetting": "Medium",
+          "Coffee": 30,
+          "Water": 510,
+          "Temperature": 96
+        },
+        "BrewInstructions": {
+          "Notes": "Before each subsequent pour, wait for the liquid to drop below the surface of the coffee bed.",
+          "Bloom": {
+            "Water": 60,
+            "Time": 30
+          },
+          "Pour1": 204,
+          "Agitate": {
+            "Note": "Ensure all coffee is saturated. Push a teaspoon through the coffee bed, 6 times front to back and left to right"
+          },
+          "Pour2": 306,
+          "Pour3": 408,
+          "Pour4": 510
         }
-    ],
-
-    "Recipes":[{
-        "CoffeeInformation": [],
-        "RecipeInformation": [],
-        "AssociatedBrewInstructions": []
-        }],
-
-    "BrewInstructions": [],
-    "SuggestedRecipes": [{
-        "V60/Pourover": {
-            "RecipeInformation": {
-                "Ratio": "1:17",
-                "GrindSetting": "Medium",
-                "Coffee": 30,
-                "Water": 510,
-                "Temperature": 96
-            },
-            "BrewInstructions": {
-                "Notes": "Before each subsequent pour, wait for the liquid to drop below the surface of the coffee bed.",
-                "Bloom": {
-                    "Water": 60,
-                    "Time": 30
-                },
-                "Pour1": 204,
-                "Agitate": {
-                    "Note": "Ensure all coffee is saturated. Push a teaspoon through the coffee bed, 6 times front to back and left to right"
-                },
-                "Pour2": 306,
-                "Pour3": 408,
-                "Pour4": 510
-            }
-        }
+      }
     },
     {
-        "Aeropress": {
-            "RecipeInformation": {
-                "Ratio": "1:3.5",
-                "GrindSetting": "Fine",
-                "Coffee": 30,
-                "Water": 105,
-                "Temperature": 85
-            },
-            "BrewInstructions": {
-                "Notes": "Some Notes",
-                "Pour1": 105,
-                "Agitate": {
-                    "Note": "Stir the brew 20 times ensuring all coffee is saturated"
-                },
-                "Plunge": "60 seconds"
-            }
+      "Aeropress": {
+        "RecipeInformation": {
+          "Ratio": "1:3.5",
+          "GrindSetting": "Fine",
+          "Coffee": 30,
+          "Water": 105,
+          "Temperature": 85
+        },
+        "BrewInstructions": {
+          "Notes": "Some Notes",
+          "Pour1": 105,
+          "Agitate": {
+            "Note": "Stir the brew 20 times ensuring all coffee is saturated"
+          },
+          "Plunge": "60 seconds"
         }
+      }
     }
-]
+  ]
 }

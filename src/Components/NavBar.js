@@ -8,12 +8,43 @@ import '../css/nav.css'
 import '../css/hamburgerNav.css';
 
 const NavBar = () => {
-    const { isAuthenticated } =useAuth0();
+    const { user, isAuthenticated } =useAuth0();
 
     let navigate = useNavigate()
     const returnHome = () => {
         let path = '/'
         navigate(path)
+    }
+
+    let initUser = () => {
+        fetch("http://localhost:8000/Users")
+            .then(res => res.json())
+            .then(json => dbInfo(json))
+            .catch("Gracefully handling error")
+    }
+
+    let dbInfo = (json) => {
+        let obj = {
+            userEmail: user.email,
+            timezone: 'Please edit Time Zone'
+        }
+        if(json.find(x => x.email === user.email)) {
+            let index = json.findIndex(x => x.email === user.email)
+            let timeZone = json[index].timezone
+            return timeZone
+        } else {
+            let configObj = {
+                method:"POST",
+                headers: {
+                    "Content-Type": "application/json",
+                    "Accept": "application/json"
+                },
+                body: JSON.stringify(obj)
+            }
+        
+            return fetch("http://localhost:8000/Users", configObj)
+                .then(response => {return response.json()})
+        }
     }
     
     return (
@@ -27,7 +58,7 @@ const NavBar = () => {
                     {!isAuthenticated && (<div className="login"><LoginButton className="nav-item"/></div>)}
                     {isAuthenticated && (
                         <div className="login">
-                            <NavLink to="/Account" className="nav-item">Account</NavLink>
+                            <NavLink to="/Account" className="nav-item" onClick={initUser}>Account</NavLink>
                             <LogoutButton className="nav-item"/>
                         </div>
                     )}
