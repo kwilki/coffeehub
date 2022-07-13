@@ -3,7 +3,8 @@
 }
 
 .ratio-form-item {
-    max-width: 20%;
+    min-width: 150px;
+    max-width: 200px;
     display: flex;
     flex-grow: 0;
 }
@@ -30,4 +31,8 @@
 
 .buttons {
     margin-top: 1em;
+}
+
+label {
+    font-family: Arial, Helvetica, sans-serif;
 }

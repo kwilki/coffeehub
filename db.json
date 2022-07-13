@@ -2,12 +2,12 @@
   "Users": [
     {
       "email": "kylewilkinson14@gmail.com",
-      "timezone": "Australia/Melbourne",
+      "timezone": "Please edit Timezone",
       "id": 1
     },
     {
-      "email": "liv.fish93@gmail.com",
-      "timezone": "Australia/Melbourne",
+      "userEmail": "liv.fish93@gmail.com",
+      "timezone": "Please edit Time Zone",
       "id": 2
     }
   ],

@@ -1,5 +1,7 @@
 import React, {Component} from 'react';
 import '../css/RatioCalculator.css'
+import RatioField from './RatioField';
+import CalcButtons from './CalcButtons';
 
 class RatioCalculator extends Component {
 
@@ -14,21 +16,17 @@ class RatioCalculator extends Component {
     }
 
     handleChange = (event) => {
-        if(event.target.name === "value") {
-            this.setState({value: event.target.value}, () => console.log(this.state))
-        } else {
             this.setState({[event.target.name]: event.target.value}, () => console.log(this.state))
-        }
     }
 
     handleSubmit = (event) => {
         event.preventDefault()
         if(this.state.value && this.state.coffee) {
-            this.setState({water: this.state.value * this.state.coffee})
+            this.setState({water: this.state.value * this.state.coffee}, () => console.log(this.state))
         } else if(this.state.value && this.state.water) {
-            this.setState({coffee: this.state.water / this.state.value})
+            this.setState({coffee: (this.state.water / this.state.value).toFixed(2)}, () => console.log(this.state))
         } else if (this.state.water && this.state.coffee) {
-            this.setState({value: this.state.water / this.state.coffee})
+            this.setState({value: (this.state.water / this.state.coffee).toFixed(2)}, () => console.log(this.state))
         }
     }
 
@@ -37,7 +35,7 @@ class RatioCalculator extends Component {
             value: '',
             coffee: '',
             water: ''
-        })
+        }, () => console.log(this.state))
     }
 
     render() {
@@ -45,39 +43,10 @@ class RatioCalculator extends Component {
             <div className="page-content">
                 <h2 className="page-heading">Ratio Calculator</h2>
                 <form className='ratio-form' onSubmit={this.handleSubmit}>
-                    <div className='ratio-form-item'>
-                        <label className='ratio-heading'>Ratio</label>
-                        {/* <div className="spacer"></div> */}
-
-                        <div className="input-container">
-                            <label>1 : </label><input name="value" inputMode="decimal" type="text" className="calculator-input" placeholder=" 0" value={this.state.value} onChange={this.handleChange} />
-                        </div>
-                        
-                        
-                    </div>
-                    <div className='ratio-form-item'>
-                        <label className='ratio-heading'>Coffee </label>
-                        {/* <div className="spacer"></div> */}
-                        <div className="input-container">
-                            <input name="coffee" inputMode="decimal" type="text" className="calculator-input" placeholder=" 0.00" value={this.state.coffee} onChange={this.handleChange} />
-                            <label> g</label>
-                        </div>
-                        
-                    </div>
-                    <div className='ratio-form-item'>
-                        <label className='ratio-heading'>Water </label>
-                        {/* <div className="spacer"></div> */}
-                        <div className="input-container">
-                            <input name="water" inputMode="decimal" type="text" className="calculator-input" placeholder=" 0.00" value={this.state.water} onChange={this.handleChange} />
-                            <label> g</label>
-                        </div>
-                        
-                    </div>
-                    <div className='buttons'>
-                        <input type="submit" />
-                        <button className="reset-button" onClick={this.handleReset}>Reset</button>
-                    </div>
-                    
+                    <RatioField name="value" headingLabel="Ratio" value={this.state.value} handleChange={this.handleChange} inputMode="decimal" placeholder=" 0" ratioConst="1 : " label="" />
+                    <RatioField name="coffee" headingLabel="Coffee" inputMode="decimal" placeholder=" 0.00" value={this.state.coffee} handleChange={this.handleChange} label=" g" />
+                    <RatioField name="water" headingLabel="Water" inputMode="decimal" placeholder=" 0.00" value={this.state.water} handleChange={this.handleChange} label=" g" />
+                    <CalcButtons className="reset-button" handleReset={this.handleReset} />
                 </form>
             </div>
         )

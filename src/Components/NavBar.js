@@ -25,7 +25,7 @@ const NavBar = () => {
 
     let dbInfo = (json) => {
         let obj = {
-            userEmail: user.email,
+            email: user.email,
             timezone: 'Please edit Time Zone'
         }
         
