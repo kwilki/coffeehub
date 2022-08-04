@@ -1,0 +1,27 @@
+.brew-container {
+    background-color: antiquewhite;
+    max-width: 650px;
+    padding: 2em;
+    border-radius: 20px;
+    margin: 1em 0;
+}
+
+.buttons {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.rating, .dateTimSpot {
+    display: inline-block;
+    margin: 0;
+}
+
+.ratingDateTime {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.gold {
+    color: gold;
+}

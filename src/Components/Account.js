@@ -33,11 +33,6 @@ const Account = () => {
     useEffect(() => {
         console.log('User Country is', userCountry);
     }, [userCountry]);
-
-    // useEffect(() => {
-    //     console.log(allTimezones);
-    // }, [allTimezones]);
-
     
     if (isLoading) {
         return <div>Loading ...</div>;
@@ -99,42 +94,46 @@ const Account = () => {
 
     return (
         isAuthenticated && (
-            <div className="page-content">
-                <img src={user.picture} alt={user.name} />
-                <h3>Username: {user.name}</h3>
-                <p>Email: {user.email}</p>
-
-                {showMe === false ? <p>Time Zone: {userTimezone} <button onClick={handleClick}>Edit</button></p> : 
-                <div>
-                    <form onSubmit={handleSubmit}>
-                        <label>Time Zone: </label> 
-                            <select name="continent" value={userContinent} onChange={handleChangeContinent}>
-                                {availableContinents.map(continent => <option key={continent} value={continent}>{continent}</option>)}
-                            </select>
-                            {userContinent && 
-                                <select name="country" value={userCountry} onChange={handleChangeCountry}>
-                                    {allTimezones.filter(continent => continent[0] === userContinent).map(
-                                        (location, i) => {
-                                            // console.log(location)
-                                            if(location.length === 3) {
-                                                return (
-                                                    <option key={location + i} value={location.join('/')} length={location.length}>{location[2]}</option>
-                                                )
-                                            } else {
-                                                return (
-                                                    <option key={location + i} value={location.join('/')}>{location[1]}</option>
-                                                )
-                                            }
-                                        }
-                                    )}
-                                </select>
-                            }
-                        <input type="submit" />
-                    </form>
-                    
+            <div className='page-container'>
+                <div className='main-heading'>
+                    <h2 className='page-heading'>Account</h2>
                 </div>
-                }
-                
+                <div className="page-content">
+                    <div>
+                        <p>Username: {user.name}</p>
+                        <p>Email: {user.email}</p>
+
+                        {showMe === false ? <div className='timezone'><p>Time Zone: {userTimezone} <button onClick={handleClick}>Edit</button></p></div> : 
+                        <div className='timezone'>
+                            <form onSubmit={handleSubmit}>
+                                <label>Time Zone: </label> 
+                                    <select name="continent" value={userContinent} onChange={handleChangeContinent}>
+                                        {availableContinents.map(continent => <option key={continent} value={continent}>{continent}</option>)}
+                                    </select>
+                                    {userContinent && 
+                                        <select name="country" value={userCountry} onChange={handleChangeCountry}>
+                                            {allTimezones.filter(continent => continent[0] === userContinent).map(
+                                                (location, i) => {
+                                                    // console.log(location)
+                                                    if(location.length === 3) {
+                                                        return (
+                                                            <option key={location + i} value={location.join('/')} length={location.length}>{location[2]}</option>
+                                                        )
+                                                    } else {
+                                                        return (
+                                                            <option key={location + i} value={location.join('/')}>{location[1]}</option>
+                                                        )
+                                                    }
+                                                }
+                                            )}
+                                        </select>
+                                    }
+                                <input type="submit" />
+                            </form>
+                        </div>
+                        }
+                    </div>
+                </div>
             </div>
         )
     );

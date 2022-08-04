@@ -4,8 +4,8 @@ class CalcButtons extends Component {
 
     render() {
         return(
-            <div className='buttons'>
-                <input type="submit" />
+            <div className='calc-buttons'>
+                <input className="submit" type="submit" />
                 <button className="reset-button" onClick={this.props.handleReset}>Reset</button>
             </div>
         )

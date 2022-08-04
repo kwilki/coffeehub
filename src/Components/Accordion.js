@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
+import { useAuth0 } from "@auth0/auth0-react";
 
 const Accordion = ({ brewing }) => {
     const [isActive, setIsActive] = useState(false);
+    const { isAuthenticated } = useAuth0();
 
     let methodName = Object.keys(brewing).toString()
     let recipeInformation = brewing[methodName].RecipeInformation
@@ -16,6 +18,11 @@ const Accordion = ({ brewing }) => {
             </div>
             {isActive && <div className="accordion-content">
                 <div className="recipe-card">
+                    {isAuthenticated && 
+                        <div className="recipeInfo">
+                            <button>Use</button>
+                        </div>
+                    }
                     <div className="recipeInfo">
                         <span>Ratio: </span> <span className="value">{recipeInformation.Ratio}</span>
                     </div>

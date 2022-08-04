@@ -22,20 +22,22 @@ class SuggestedRecipesPage extends Component {
     }
 
     render () {
+        
         return (
-                <div className="page-content"> 
+            <div className="page-container"> 
+                <div className="main-heading">
                     <h2 className="page-heading">Suggested Recipes</h2>
+                </div>
+                <div className="page-content">
                     <div className='recipe-accordions'>
                         {this.state && this.state.Recipes.map((sugRecipe, i) => {
                             return (
-                                <div key={i} className="accordion-container">
-                                    <Accordion  brewing={sugRecipe} />
-                                </div>
+                                <Accordion key={i} brewing={sugRecipe} />
                             )
                         })}
                     </div>
-                    
                 </div>
+            </div>
         )
     }
 }

@@ -1,0 +1,77 @@
+
+
+.recipe-container {
+    max-width: 800px;
+}
+
+.buttons-container {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.brewCard {
+    background-color: antiquewhite;
+    color: black;
+    margin: 1em 0;
+    padding: 0.5em;
+    /* display: flex; */
+    min-width: 300px;
+    max-width: 350px;
+    border-radius: 20px;
+    margin: 1em auto;
+}
+
+.brewCard:hover {
+    cursor: pointer;
+}
+
+.coffee-information {
+    margin-left: 1em;
+}
+
+.dateTime {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 2em;
+    margin-bottom: 0.5em;
+}
+
+.recipe-information {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 0.5em;
+    margin-right: 2em;
+}
+
+.brewingInstructions {
+    border-bottom: 0.25px solid;
+    padding: 0.2em 0;
+    font-size: 0.9rem;
+}
+
+.brewingInstructions:last-child {
+    border-bottom: none;
+}
+
+.right {
+    float: right;
+}
+
+.instructionNotes {
+    padding: 0.3em;
+    font-size: 0.8rem;
+}
+
+table {
+    width: 100%;
+    margin: 0.5em 0;
+}
+
+td {
+    padding: 0.5em;
+    font-size: 0.9rem;
+}
+
+.sb {
+    margin-left: 0.5em;
+}

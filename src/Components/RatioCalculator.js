@@ -40,14 +40,18 @@ class RatioCalculator extends Component {
 
     render() {
         return(
-            <div className="page-content">
-                <h2 className="page-heading">Ratio Calculator</h2>
-                <form className='ratio-form' onSubmit={this.handleSubmit}>
-                    <RatioField name="value" headingLabel="Ratio" value={this.state.value} handleChange={this.handleChange} inputMode="decimal" placeholder=" 0" ratioConst="1 : " label="" />
-                    <RatioField name="coffee" headingLabel="Coffee" inputMode="decimal" placeholder=" 0.00" value={this.state.coffee} handleChange={this.handleChange} label=" g" />
-                    <RatioField name="water" headingLabel="Water" inputMode="decimal" placeholder=" 0.00" value={this.state.water} handleChange={this.handleChange} label=" g" />
-                    <CalcButtons className="reset-button" handleReset={this.handleReset} />
-                </form>
+            <div className="page-container">
+                <div className='main-heading'>
+                    <h2 className="page-heading">Ratio Calculator</h2>
+                </div>
+                <div className='page-content'>
+                    <form className='ratio-form' onSubmit={this.handleSubmit}>
+                        <RatioField name="value" headingLabel="Ratio" value={this.state.value} handleChange={this.handleChange} inputMode="decimal" placeholder=" 0" ratioConst="1 : " label="" />
+                        <RatioField name="coffee" headingLabel="Coffee" inputMode="decimal" placeholder=" 0.00" value={this.state.coffee} handleChange={this.handleChange} label=" g" />
+                        <RatioField name="water" headingLabel="Water" inputMode="decimal" placeholder=" 0.00" value={this.state.water} handleChange={this.handleChange} label=" g" />
+                        <CalcButtons className="reset-button" handleReset={this.handleReset} />
+                    </form>
+                </div>
             </div>
         )
     }

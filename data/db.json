@@ -13,12 +13,120 @@
   ],
   "Recipes": [
     {
-      "CoffeeInformation": [],
-      "RecipeInformation": [],
-      "AssociatedBrewInstructions": []
+      "dateCreated": "26/07/2022",
+      "timeCreated": "8:10pm",
+      "CoffeeInformation": {
+        "origin": "Colombia",
+        "varietal": "Pink Bourbon",
+        "producer": "Wilder Lazo",
+        "process": "Washed",
+        "roaster": "Cool Hand",
+        "rating": "4",
+        "notes": "MORE NOTES"
+      },
+      "RecipeInformation": {
+        "brewMethod": "V60",
+        "grinder": "Ode",
+        "grindSetting": "3",
+        "ratio": "1:17",
+        "coffeeAmount": "30",
+        "waterAmount": "510",
+        "temperature": "96",
+        "notes": "MORE NOTES"
+      },
+      "BrewingInstructions": {
+        "name": "1:17 - 510ml",
+        "water": 510,
+        "action": [
+          {
+            "Bloom": {
+              "water": "60",
+              "time": "30"
+            }
+          },
+          {
+            "Pour": {
+              "water": "144"
+            }
+          },
+          {
+            "Agitate": {
+              "notes": "Stir coffee bed, front to back, left to right, ensuring all coffee is saturated"
+            }
+          },
+          {
+            "Pour": {
+              "water": "102"
+            }
+          },
+          {
+            "Pour": {
+              "water": "102"
+            }
+          },
+          {
+            "Pour": {
+              "water": "102"
+            }
+          }
+        ]
+      },
+      "userId": 1,
+      "id": 1
+    },
+    {
+      "dateCreated": "26/07/2022",
+      "timeCreated": "8:27pm",
+      "CoffeeInformation": {
+        "origin": "Brazil",
+        "varietal": "Gesha",
+        "producer": "Andres",
+        "process": "Natural",
+        "roaster": "Cool Hand",
+        "rating": "5",
+        "notes": "Some Notes here"
+      },
+      "RecipeInformation": {
+        "brewMethod": "V60",
+        "grinder": "Ode",
+        "grindSetting": "4",
+        "ratio": "1:17",
+        "coffeeAmount": "30",
+        "waterAmount": "510",
+        "temperature": "95",
+        "notes": "Some Notes"
+      },
+      "BrewingInstructions": {},
+      "userId": 1,
+      "id": 2
+    },
+    {
+      "dateCreated": "04/08/2022",
+      "timeCreated": "11:35am",
+      "CoffeeInformation": {
+        "origin": "Honduras",
+        "varietal": "Geisha",
+        "producer": "Nahun Fernandez",
+        "process": "Washed",
+        "roaster": "Proud Mary",
+        "rating": "4",
+        "notes": "Red grape, citrus, floral, & silky"
+      },
+      "RecipeInformation": {
+        "brewMethod": "V60",
+        "grinder": "Ode",
+        "grindSetting": "3",
+        "ratio": "1:17",
+        "coffeeAmount": "30",
+        "waterAmount": "510",
+        "temperature": "96",
+        "notes": ""
+      },
+      "BrewingInstructions": {},
+      "userId": 1,
+      "id": 3
     }
   ],
-  "BrewInstructions": [],
   "SuggestedRecipes": [
     {
       "V60/Pourover": {

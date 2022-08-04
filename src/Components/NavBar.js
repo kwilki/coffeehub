@@ -7,7 +7,7 @@ import '../css/nav.css'
 import '../css/hamburgerNav.css';
 
 const NavBar = () => {
-    const { user, isAuthenticated } =useAuth0();
+    const { user, isAuthenticated } = useAuth0();
     const [userId, setUserId] = useState()
 
     let navigate = useNavigate()
@@ -56,16 +56,11 @@ const NavBar = () => {
                 <div className="Navbar">
                     <NavLink to="/" className="nav-item">Home</NavLink>
                     <NavLink to="/SuggestedRecipes" className="nav-item">Suggested Recipes</NavLink>
+                    {isAuthenticated && <NavLink to="/Recipes" className="nav-item">Recipes</NavLink>}
                     <NavLink to="/RatioCalculator" className="nav-item">Ratio Calculator</NavLink>
-                    {!isAuthenticated && (<div className="login"><LoginButton className="nav-item"/></div>)}
-                    {isAuthenticated && (
-                        <div className="login">
-                            <NavLink to="/Account" className="nav-item" userid={userId} onClick={initUser}>Account</NavLink>
-                            <LogoutButton className="nav-item"/>
-                        </div>
-                    )}
-                    
-                    
+                    {isAuthenticated && <NavLink to="/Account" className="nav-item" userid={userId} onClick={initUser}>Account</NavLink>}
+                    {!isAuthenticated && (<div className="login"><LoginButton className="nav-button"/></div>)}
+                    {isAuthenticated && (<LogoutButton className="nav-button"/>)}
                 </div>
             </nav>
             <button className="hamburger" onClick={toggleActive}>
@@ -74,20 +69,22 @@ const NavBar = () => {
             
             <nav className="mobile-nav">
                 <div className="menu-items">
-                    <NavLink to="/" className="nav-item" onClick={toggleActive}>Home</NavLink>
+                    <NavLink to="/" className="mobile-nav-item" onClick={toggleActive}>Home</NavLink>
                     <br />
-                    <NavLink to="/SuggestedRecipes" className="nav-item" onClick={toggleActive}>Suggested Recipes</NavLink>
+                    <NavLink to="/SuggestedRecipes" className="mobile-nav-item" onClick={toggleActive}>Suggested Recipes</NavLink>
                     <br />
-                    <NavLink to="/RatioCalculator" className="nav-item" onClick={toggleActive}>Ratio Calculator</NavLink>
+                    <NavLink to="./RatioCalculator/RatioCalculator.js" className="mobile-nav-item" onClick={toggleActive}>Ratio Calculator</NavLink>
                     <br />
-                    {!isAuthenticated && (<div className="login"><LoginButton className="nav-item" onClick={toggleActive} /><br /></div>)}
                     {isAuthenticated && (
-                        <div className="login">
-                            <NavLink to="/Account" className="nav-item" onClick={toggleActive}>Account</NavLink>
-                            <br />
-                            <LogoutButton className="nav-item" onClick={toggleActive} />
+                        <div>
+                            <NavLink to="/Account" className="mobile-nav-item" onClick={toggleActive}>Account</NavLink>
+                            <NavLink to="/Recipes" className="mobile-nav-item">Recipes</NavLink>
                         </div>
                     )}
+                </div>
+                <div className='login'>
+                    {!isAuthenticated && (<div className="login-button"><LoginButton className="nav-button" onClick={toggleActive} /><br /></div>)}
+                    {isAuthenticated && <div className="login-button"><LogoutButton className="mobile-button" onClick={toggleActive} /></div>}
                 </div>
             </nav>
             

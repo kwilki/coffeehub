@@ -1,0 +1,15 @@
+.form-input {
+    margin-bottom: 0.2em;
+}
+
+.form-container {
+    margin-left: 1em;
+}
+
+.dateTime, .recipe-information {
+    font-size: 0.8em;
+}
+
+.recipe-summary {
+    margin-right: 0.5em;
+}

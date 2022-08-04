@@ -1,40 +1,140 @@
-* {
-    margin: 0;
-    padding: 0;
-    font-size: 16px;
+.App {
+    width: 100%;
+}
+
+div#root {
+    width: 100%;
 }
 
 body {
-    padding-left: 1rem;
-}
+    background: linear-gradient(#4f380b, #fff2bb);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+} 
 
-button {
-    font-size: 1rem;
-    padding: 0.1em 0.5em 0.1em 0.5em;
-    border: 2px solid;
-}
-
-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin: 2em;
-}
-
-.title {
-    font-size: 2em;
-    /* display: inline-block; */
-}
-
-/* Content */
 .page-content {
-    margin: 0 3em 0 3em;
+    display: flex;
+    justify-content: center;
 }
+
+.page-heading {
+    margin-left: 5%;
+    color: antiquewhite;
+}
+
+/* * {
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+    font-family: Helvetica, Arial, sans-serif;
+    font-weight: lighter;
+}
+
+@media only screen and (min-width : 1200px) {
+
+}
+
+@media only screen and (min-width : 1000px)  {
+    #root div div.page-content {
+        margin: 5em 15em 0 15em;
+    }
+}
+
+@media only screen and (min-width : 900px) {
+    div div.page-content {
+        margin: 5em 9em 0 9em;
+    }
+}
+
+@media only screen and (max-width : 400px) {
+    .text-area-container textarea {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 350px) {
+    div.App header {
+        margin: 2em 2em 2em 1em;
+    }
+
+    .App div div.page-content {
+        margin: 0 1.5em 0 1.5em;
+    }
+}
+
+.form-input {
+    padding: 0.1em;
+    margin-bottom: 0.1em;
+}
+
+button, input[type=submit] {
+    font-size: 1rem;
+    padding: 0.1em 0.6em 0.1em 0.6em;
+    border: 2px solid;
+    margin-left: 0.5em;
+    border-radius: 0.8em;
+    background-color: #FFD600;
+
+}
+
+button:hover, input[type=submit]:hover {
+    transform: scale(1.1);
+    
+}
+
+input.submit {
+    margin-left: 0;
+}
+
+.page-heading {
+    margin-bottom: 1em;
+    color: #1C1304;
+}
+
+
 
 h2 {
-    font-size: 1.5rem;
+    font-size: 2rem;
 }
 
 h3 {
     font-size: 1.2rem;
 }
+
+p {
+    margin-bottom: 0.5em;
+    max-width: 600px;
+}
+
+.timezone {
+    margin-top: 1em
+}
+
+.text-area-container {
+    min-width: 100%;
+}
+
+textarea {
+    width: 80%;
+    min-width: 80%;
+    height: 100%;
+    padding: 0.2em;
+    min-height: 150px;
+}
+
+textarea:focus::placeholder {
+    color: transparent;
+}
+
+textarea:focus {
+    outline: none;
+}
+
+.form-container {
+    min-width: 100%;
+    margin-bottom: 1em;
+}
+
+.water-amount {
+    display: inline-block;
+} */
