@@ -7,6 +7,7 @@
 .buttons-container {
     display: flex;
     justify-content: flex-end;
+    margin-bottom: 1em;
 }
 
 .brewCard {
@@ -74,4 +75,9 @@ td {
 
 .sb {
     margin-left: 0.5em;
+}
+
+.filter-buttons {
+    display: flex;
+    justify-content: flex-end;
 }

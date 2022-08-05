@@ -14,8 +14,12 @@ const Filter = (props) => {
                 <input name="waterAmount" placeholder="Water Amount" />
                 <br/>
                 <input name="rating" placeholder="Rating" />
-                <button type="button" onClick={props.reset}>Reset</button>
-                <input type="submit"/>
+                
+                <div className="filter-buttons">
+                    <input type="submit"/>
+                    <button className="filter-reset" type="button" onClick={props.reset}>Reset</button>
+                </div>
+                
             </form>
         </div>
     )

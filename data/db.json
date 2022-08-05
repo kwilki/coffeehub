@@ -125,6 +125,32 @@
       "BrewingInstructions": {},
       "userId": 1,
       "id": 3
+    },
+    {
+      "dateCreated": "04/08/2022",
+      "timeCreated": "5:58pm",
+      "CoffeeInformation": {
+        "origin": "Ethiopia",
+        "varietal": "SL28",
+        "producer": "Liv",
+        "process": "Liv",
+        "roaster": "Liv",
+        "rating": "5",
+        "notes": "Its Liv"
+      },
+      "RecipeInformation": {
+        "brewMethod": "v60",
+        "grinder": "Ode",
+        "grindSetting": "10",
+        "ratio": "1:10",
+        "coffeeAmount": "20",
+        "waterAmount": "300",
+        "temperature": "95",
+        "notes": "Some notes"
+      },
+      "BrewingInstructions": {},
+      "userId": 1,
+      "id": 4
     }
   ],
   "SuggestedRecipes": [

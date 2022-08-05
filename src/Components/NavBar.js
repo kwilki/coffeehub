@@ -73,12 +73,13 @@ const NavBar = () => {
                     <br />
                     <NavLink to="/SuggestedRecipes" className="mobile-nav-item" onClick={toggleActive}>Suggested Recipes</NavLink>
                     <br />
-                    <NavLink to="./RatioCalculator/RatioCalculator.js" className="mobile-nav-item" onClick={toggleActive}>Ratio Calculator</NavLink>
+                    <NavLink to="/RatioCalculator" className="mobile-nav-item" onClick={toggleActive}>Ratio Calculator</NavLink>
                     <br />
                     {isAuthenticated && (
                         <div>
+                            <NavLink to="/Recipes" className="mobile-nav-item" onClick={toggleActive}>Recipes</NavLink>
+                            <br/>
                             <NavLink to="/Account" className="mobile-nav-item" onClick={toggleActive}>Account</NavLink>
-                            <NavLink to="/Recipes" className="mobile-nav-item">Recipes</NavLink>
                         </div>
                     )}
                 </div>
