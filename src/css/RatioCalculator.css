@@ -16,6 +16,7 @@
     flex-grow: 0;
     color: #1C1304;
     background-color: transparent;
+    font-size: 1.2em;
 }
 
 ::placeholder {
@@ -32,6 +33,7 @@ input:focus::placeholder {
 
 .ratio-heading {
     flex-grow: 1;
+    font-size: 1.2em;
 }
 
 .input-container {
@@ -43,4 +45,17 @@ input:focus::placeholder {
     display: flex;
     justify-content: space-between;
     width: 130px;
+}
+
+.calc-label {
+    font-size: 1.2em;
+}
+
+.submit {
+    font-size: 1.1em;
+}
+
+.reset-button {
+    font-size: 1.1em;
+    margin-left: 1em;
 }

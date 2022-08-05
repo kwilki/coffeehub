@@ -8,9 +8,9 @@ class RatioField extends Component {
             <div className='ratio-form-item'>
                 <label className='ratio-heading'>{this.props.headingLabel}</label>
                 <div className="input-container">
-                    <label>{this.props.ratioConst}</label>
+                    <label className="calc-label">{this.props.ratioConst}</label>
                     <input className="calculator-input" name={this.props.name} inputMode={this.props.inputMode} type={this.props.type} placeholder={this.props.placeholder} value={this.props.value} onChange={this.props.handleChange} maxLength="5" />
-                    <label> {this.props.label}</label>
+                    <label className="calc-label"> {this.props.label}</label>
                 </div>
             </div>
         )
