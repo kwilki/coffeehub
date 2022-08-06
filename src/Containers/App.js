@@ -35,8 +35,6 @@ const App = () => {
     })
   }
 
-  // const recipeNavigation = useNavigate()
-
   return (
     <Router>
       <div className='App'>
