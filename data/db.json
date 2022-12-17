@@ -32,7 +32,7 @@
         "coffeeAmount": "30",
         "waterAmount": "510",
         "temperature": "96",
-        "notes": "Some More Notes"
+        "notes": "new notes"
       },
       "BrewingInstructions": {
         "name": "1:17 - 510ml",
@@ -151,6 +151,58 @@
       "BrewingInstructions": {},
       "userId": 1,
       "id": 4
+    },
+    {
+      "dateCreated": "06/08/2022",
+      "timeCreated": "10:37am",
+      "CoffeeInformation": {
+        "origin": "Colombia",
+        "varietal": "",
+        "producer": "",
+        "process": "",
+        "roaster": "",
+        "rating": "",
+        "notes": ""
+      },
+      "RecipeInformation": {
+        "brewMethod": "",
+        "grinder": "",
+        "grindSetting": "",
+        "ratio": "",
+        "coffeeAmount": "",
+        "waterAmount": "500",
+        "temperature": "",
+        "notes": ""
+      },
+      "BrewingInstructions": {},
+      "userId": 1,
+      "id": 5
+    },
+    {
+      "dateCreated": "06/08/2022",
+      "timeCreated": "10:39am",
+      "CoffeeInformation": {
+        "origin": "Brazil",
+        "varietal": "",
+        "producer": "",
+        "process": "",
+        "roaster": "",
+        "rating": "",
+        "notes": ""
+      },
+      "RecipeInformation": {
+        "brewMethod": "",
+        "grinder": "",
+        "grindSetting": "",
+        "ratio": "",
+        "coffeeAmount": "",
+        "waterAmount": "500",
+        "temperature": "",
+        "notes": ""
+      },
+      "BrewingInstructions": {},
+      "userId": 1,
+      "id": 6
     }
   ],
   "SuggestedRecipes": [
